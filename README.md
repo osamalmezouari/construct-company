@@ -1,4 +1,4 @@
-# construct web site 
+# construct company
 This website is built using HTML and CSS and includes a homepage, a list of featured services, a showcase of previous projects, a contact page, a team members section, and client testimonials.
 <br>
 
