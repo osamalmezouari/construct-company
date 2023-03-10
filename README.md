@@ -1,10 +1,13 @@
 # construct web site 
 This website is built using HTML and CSS and includes a homepage, a list of featured services, a showcase of previous projects, a contact page, a team members section, and client testimonials.
 <br>
+
 -The homepage provides an overview of the website and the services offered.
 <br>
+
 -The features page highlights specific services available to customers.
 <br>
+
 -The projects page showcases examples of previous work completed by the company.
 <br>
 
