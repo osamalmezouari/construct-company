@@ -1,0 +1,980 @@
+:root{
+    --maincolor:#2d3e50;
+    --seccolor:#ffc000;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+*{
+    box-sizing: border-box;
+}
+/*top bar (s)*/
+.pone>.topbar{
+    width: 100%;
+    height: 40px;
+    padding: 10px 0px 10px 0px;
+    background-color: var(--maincolor);
+    display: flex;
+    justify-content: space-around;
+}
+.pone>.topbar>.call{
+    align-self: center;
+    color: white;
+    font-size: 0.7rem;
+}
+.pone>.topbar>.mail{
+    align-items: center;
+}
+.pone>.topbar>.mail>.mailtwo{
+    display: inline-block;
+    color: white;
+    font-size: 0.7rem;
+}
+.pone>.topbar>.mail>#icon{
+    color: var(--seccolor);
+    padding: 0px 10px 0px 0px;
+    font-size: 0.7rem;
+}
+/*top bar (END)*/
+/*header for larger screens (start)*/
+    .pone>.container>.pheader{
+        display: none;
+    }
+    .pone>.container >.header{
+        padding: 0px 15px ;
+        display: flex;
+        justify-content: space-between;
+    }
+    .pone>.container>.header>.logo{
+        font-weight: 600;
+        align-self: center;
+        color: var(--maincolor);
+    }
+    .pone>.container>.header>.logo::before{
+        content: "CONS";
+        color: var(--seccolor);
+    }
+    .pone>.container>.header>.nav>ul{
+        padding: 0px;
+        list-style: none;
+    }
+    .pone>.container>.header>.nav>ul>li{
+        text-transform: capitalize;
+        display: inline-block;
+        padding: 0px 10px;
+    }
+    .pone>.container>.header>.nav>ul>li>:hover{
+        color: var(--seccolor);
+    }
+    .pone>.container>.header>.nav>ul>li>i{
+        color: var(--maincolor);
+        align-self: center;
+        cursor: pointer;
+    }
+    .pone>.container>.header>.nav>ul>li>a{
+        text-decoration: none;
+        color: var(--maincolor);
+        font-weight: 600;
+    }
+/*header for larger screen end (end)*/
+/* header phone (s)*/
+    @media (max-width:600px) {
+        .pone>.bg>.container>#right{
+            display: none;
+        }
+        .pone>.bg>.container>#left{
+            display: none;
+        }
+        .pone>.container>.header{
+            display: none;
+        }
+        .pone>.container>.pheader{
+            display:grid;
+            grid-template-columns: 60px 1fr 60px;
+            grid-template-rows: 50px;
+        }
+        .pone>.container>.pheader>.logo{
+            font-weight: 600;
+            grid-area: 1/1;
+            padding: 10px;
+        }
+        .pone>.container>.pheader>.logo::before{
+            content: "CONS";
+            color: var(--seccolor);
+        }
+        .pone>.container>.pheader>#bar{
+            grid-area: 1/3;
+            padding: 10px;
+            color: var(--seccolor);
+            text-align: center;
+            line-height: 20px;
+        }
+        .pone>.container>.pheader>.nav{
+            display: none;
+            grid-area: 2/1/2/4;
+            background-color: var(--maincolor);
+        }
+        .pone>.container>.pheader>.nav>ul{
+            padding: 0px;
+            list-style: none;
+            display: grid;
+            grid-template-rows: repeat(6,1fr);
+        }
+        .pone>.container>.pheader>.nav>ul>li{
+            text-transform: capitalize;
+            display: block;
+            padding: 10px 0px;
+            width: 100%;
+            text-align: center;
+        }
+        .pone>.container>.pheader>.nav>ul>li:nth-child(6){
+            grid-area: 1/1;
+            background-color: white;
+            border:0px solid transparent;
+            border-radius: 15px;
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 10px 1fr 30px;
+        }
+        .pone>.container>.pheader>.nav>ul>li:nth-child(6)>input{
+            border: 0px transparent solid;
+            outline: none;
+            grid-area: 1/2;
+            caret-color:var(--seccolor);
+            color: var(--seccolor);
+        }
+        .pone>.container>.pheader>.nav>ul>li:nth-child(6)>i{
+            border: 0px transparent solid;
+            outline: none;
+            grid-area: 1/3;
+            color: var(--maincolor);
+        }
+        .pone>.container>.pheader>.nav>ul>li>a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+        .pone>.container>.pheader>.nav>ul>li>:hover{
+            color: var(--seccolor);
+        }
+        .pone>.container>.pheader>#bar:hover~.nav{
+            display: block;
+        }
+    }
+/*header phones (end)*/
+/*bg (s)*/
+    .pone>.bg{
+        background-image: url(../images/landing.png);
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: -1;
+        }
+    .pone>.bg>.container{
+        position: relative;
+        height: max-content;
+        text-align: center;
+        
+    }
+    .pone>.bg>.container>#right{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-size: 25px;
+        color: var(--seccolor);
+
+    }
+    .pone>.bg>.container>#left{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        font-size: 25px;
+        color: var(--seccolor);
+    }
+    .pone>.bg>.container>.textone{
+        font-size: 50px;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: white;
+    }
+    .pone>.bg>.container>.textone::before{
+        content: "construction ";
+        color: var(--seccolor);
+    }
+    .pone>.bg>.container>.texttwo{
+        max-width: 60%;
+        margin: auto;
+        margin-top: 20px;
+        color: white;
+        font-weight: 200;
+    }
+    .pone>.bg>.container>.read{
+        width: 120px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-transform: capitalize;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        background-color: var(--seccolor);
+        border: 0px solid transparent;
+        border-radius: 20px;
+    }
+    .pone>.switch{
+        width: 120px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        position: relative;
+        top: -35px;
+    }
+    .pone>.switch>div:nth-child(1){
+        background-color: var(--seccolor);
+        width: 25px;
+        height: 5px;
+        filter: opacity(0.6);
+        border: 0px solid transparent;
+        border-radius: 10px;
+    }
+    .pone>.switch>div:nth-child(2){
+        background-color: var(--seccolor);
+        width: 25px;
+        height: 5px;
+        border: 0px solid transparent;
+        border-radius: 10px;
+    }
+    .pone>.switch>div:nth-child(3){
+        background-color: var(--seccolor);
+        width: 25px;
+        height: 5px;
+        filter: opacity(0.6);
+        border: 0px solid transparent;
+        border-radius: 10px;
+    }
+
+/* bg (end)*/
+/*quotes (s)*/
+    .quotes{
+        width: 70%;
+        height: max-content;
+        position: relative;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .quotes>div{
+        text-transform: capitalize;
+        color: var(--maincolor);
+        font-size: 30px;
+    }
+    .quotes>div::before{
+        content: "welcome ";
+        color:var(--seccolor);
+    }
+    .quotes>p{
+        color: var(--maincolor);
+        font-weight: 300;
+    }
+/*quotes (e)*/
+/*page two (s)*/
+    .ptwo>.container{
+        display: flex;
+        padding: 0px 10px;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 900px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .ptwo>.container>div{
+        background-color: var(--maincolor);
+        padding-top: 20px;
+        height: 250px;
+        width: 200px;
+        border: solid 2px transparent;
+    }
+    .ptwo>.container>div>.icon{
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: transparent 0px solid;
+        border-radius: 50%;
+    }
+    .ptwo>.container>div>.icon>i{
+        line-height: 50px;
+        font-size: 25px;
+        color: var(--seccolor);
+    }
+    .ptwo>.container>div>h3{
+        margin-top: 30px;
+        color: white;
+        text-transform: uppercase;
+    }
+    .ptwo>.container>div>p{
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 14px;
+    }
+    .ptwo>.container>div:hover{
+        text-transform: capitalize;
+        background-color: white;
+        border: solid 2px var(--seccolor);
+        
+    }
+    .ptwo>.container>div:hover>.icon{
+        background-color: var(--seccolor);
+        border: transparent 0px solid;
+        border-radius: 50%;
+    }
+    .ptwo>.container>div:hover>.icon>i{
+        color: white;
+    }
+    .ptwo>.container>div:hover>h3{
+        color: var(--maincolor);
+    }
+    .ptwo>.container>div:hover>p{
+        color: var(--maincolor);
+        font-weight: 400;
+    }
+    
+    /*page two (e)*/
+    /*page three (s)*/
+        .pthree>.container{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 10px;
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+        .pthree>.container>.img{
+            background-image: url(../images/ourservice.png);
+            background-size: cover;
+            background-position: center;
+            height: 340px;
+            width: 550px;
+        }
+        .pthree>.container>.ourservices{
+            height: 300px;
+            width: 450px;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 15px;
+            margin-bottom: 50px;
+        }
+        .pthree>.container>.ourservices>h1{
+            text-transform: capitalize;
+            color: var(--maincolor);
+            grid-area: 1/1;
+            margin: 0px 0px 10px 0px ;
+        }
+        .pthree>.container>.ourservices>div{
+            display: grid;
+            grid-template-columns: 65px 1fr;
+            grid-template-rows: 40px 1fr;
+        }
+        .pthree>.container>.ourservices>div>.icon{
+            grid-area: 1/1/3/1;
+            background-color: var(--maincolor);
+            width: 50px;
+            height: 50px;
+            border: 0px transparent solid;
+            border-radius: 50%;
+            text-align: center
+        }
+        .pthree>.container>.ourservices>div>.icon>i{
+            line-height: 50px;
+            color: white
+        }
+        .pthree>.container>.ourservices>div>h4{
+            margin:  5px 0px;
+            color: var(--maincolor);
+            text-transform: capitalize;
+        }
+        .pthree>.container>.ourservices>div>p{
+            grid-area: 2/2;
+            margin: 0px;
+            color: var(--maincolor);
+            font-weight: 300;
+        }
+        .pthree>.container>.ourservices>.one{
+            grid-area: 2/1;
+        }
+        .pthree>.container>.ourservices>.two{
+            grid-area: 3/1;
+        }
+        .pthree>.container>.ourservices>.three{
+            grid-area: 4/1;
+        }
+        @media (max-width:700px) {
+            .pthree>.container>.img{
+                display: none;
+            }
+            .pthree>.container>.ourservices>h1{
+                width: 100%;
+            }
+            .pthree>.container>.ourservices{
+                width:100%;
+            }
+        }
+    /*page three (e)*/
+    /*stat (s)*/
+    .stat>.container{
+        max-width: 900px;
+    }
+        .stat>.container>.bg{
+            width: 100%;
+            height: 170px;
+            z-index: -1;
+            background-image: url(../images/static.png);
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0px 10px;
+        }
+        .stat>.container>.bg>div{
+            width: 180px;
+            text-align: center;
+        }
+        .stat>.container>.bg>div>h4{
+            font-size: large;
+            color: white;
+            text-transform: capitalize;
+        }
+        .stat>.container>.bg>div>h6{
+            font-size: 40px;
+            margin-top: 0px;
+            color: white;
+        }
+        @media (max-width:800px){
+            .stat>.container>.bg{
+                background-image: none;
+                height: max-content;
+            }
+            .stat>.container>.bg>div{
+                margin: auto;
+                margin-bottom: 10px;
+                border:2px var(--seccolor)  solid ;
+                background-color: var(--maincolor);
+            }
+            .stat>.container>.bg>div>h6{
+                margin-bottom: 20px;
+            }
+        }
+    /*stat (e)*/
+    /*quotes (s)*/
+    .quotestwo{
+        width: 70%;
+        height: max-content;
+        position: relative;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .quotestwo>div{
+        text-transform: capitalize;
+        color: var(--maincolor);
+        font-size: 30px;
+    }
+    .quotestwo>div::before{
+        content: "what ";
+        color:var(--seccolor);
+    }
+    .quotestwo>p{
+        color: var(--maincolor);
+        font-weight: 300;
+    }
+    /*quotes (e)*/
+    /*pfour (s)*/
+        .pfour>.container{
+            max-width: 840px;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            row-gap: 30px;
+        }
+        .pfour>.container>div{
+            display: grid;
+            width: 220px;
+            grid-template-columns: 50px 1fr;
+            grid-template-rows: 40px 1fr;
+        }
+        .pfour>.container>div>i{
+            color: var(--seccolor);
+            font-size: 30px;
+            grid-area: 1/1/2/1;
+        }
+        .pfour>.container>div>h4{
+            margin: 0px;
+            text-align: center;
+            color: var(--maincolor);
+            font-size: 20px;
+            text-transform: capitalize;
+            grid-area: 1/2;
+        }
+        .pfour>.container>div>p{
+            margin: 0px;
+            grid-area: 2/2;
+            font-size: 14px;
+            font-weight: 300px;
+            color: #2d3e50;
+            text-align: center;
+        }
+    /*pfour (e)*/
+        /*quotes (s)*/
+        .quotesfive{
+            width: 70%;
+            height: max-content;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 80px;
+        }
+        .quotesfive>div{
+            text-transform: capitalize;
+            color: var(--maincolor);
+            font-size: 30px;
+        }
+        .quotesfive>div::before{
+            content: "view ";
+            color:var(--seccolor);
+        }
+        .quotesfive>p{
+            color: var(--maincolor);
+            font-weight: 300;
+        }
+        /*quotes (e)*/
+    /*buttons(s)*/
+        .buttons{
+            width: max-content;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+        }
+        @media(max-width:450px){
+            .buttons{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+        .buttons>div{
+            width:100px;
+            text-align: center;
+            display: inline-block;
+            text-transform: capitalize;
+            color: var(--maincolor);
+            font-weight: 400;
+            opacity: 0.7;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .buttons>div:hover{
+            color: var(--seccolor);
+        }   
+    /*buttons(e)*/
+    /*gallary (s)*/
+        .gallary>.container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 20px;
+            max-width: 900px;
+            margin: auto;
+            padding: 10px;
+        }
+        .gallary>.container>:first-child{
+            background-image: url(../images/bgteam1.png);
+            background-size: cover;
+            background-position: center;
+            width: 200px;
+            height: 250px;
+        }
+        .gallary>.container>:nth-child(2){
+            background-image: url(../images/bgteam2.png);
+            background-size: cover;
+            width: 200px;
+            height: 250px;
+        }
+        .gallary>.container>:nth-child(3){
+            background-image: url(../images/bgteam3.png);
+            background-size: cover;
+            width: 200px;
+            height: 250px;
+        }
+        .gallary>.container>:nth-child(4){
+            background-image: url(../images/bgteam4.png);
+            background-size: cover;
+            width: 200px;
+            height: 250px;
+        }
+        .gallary>.container>div>div{
+            display: none;
+        }
+        .gallary>.container>div:hover>div{
+            display: block;
+            background-color: #ffbf008e;
+            width: 200px;
+            height: 250px;
+            position: absolute;
+            text-align: center;
+            line-height: 250px;
+            cursor: pointer;
+        }
+        .gallary>.container>div>div>i{
+            color: white;
+        }
+    /*gallary (e)*/
+    /*quotes three (s)*/
+        /*quotes (s)*/
+        .quotesthree{
+            width: 70%;
+            height: max-content;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 80px;
+        }
+        .quotesthree>div{
+            text-transform: capitalize;
+            color: var(--maincolor);
+            font-size: 30px;
+        }
+        .quotesthree>div::before{
+            content: "team ";
+            color:var(--seccolor);
+        }
+        .quotesthree>p{
+            color: var(--maincolor);
+            font-weight: 300;
+        }
+    /*quotes three (e)*/
+    /*teams (s)*/
+        
+        .team>.container{
+            max-width: 750px;
+            margin: auto;
+            display: flex;
+            row-gap: 10px;
+            flex-wrap:wrap ;
+            justify-content: space-evenly;
+            margin-bottom: 60px;
+        }
+        .team>.container>div{
+            background-color: var(--maincolor);
+            width: 230px;
+            height: 270px;
+            padding-top: 20px;
+            
+        }
+        .team>.container>div>.ava{
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border: 0px solid transparent;
+            border-radius: 50%;
+        }
+        .team>.container>.one>.ava{
+            background-image: url(../images/eng1.png);
+            background-size: cover;
+        }
+        .team>.container>.two>.ava{
+            background-image: url(../images/eng2.png);
+            background-size: cover;
+        }   
+        .team>.container>.three>.ava{
+            background-image: url(../images/eng3.png);
+            background-size: cover;
+        }
+        .team>.container>div>h6{
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            margin: 15px 0px 5px 0px ;
+            text-transform: capitalize;
+        }
+        .team>.container>div>p{
+            color: white;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 300;
+            color: var(--seccolor);
+        }
+        .team>.container>div>div{
+            color: white;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 300;
+            color: white;
+            font-size: 25px;
+        }
+    /*teams(e)*/
+    /*clients (s)*/
+        .client>.container{
+            background-color: #eee;
+            max-width: 900px;
+            padding: 10px ;
+            border: 0px solid  transparent;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+            /*quotes four (s)*/
+        /*quotes (s)*/
+        .client>.container>.quotesthree{
+            width: 70%;
+            height: max-content;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 80px;
+
+        }
+        .client>.container>.quotesthree>div{
+            text-transform: capitalize;
+            color: var(--maincolor);
+            font-size: 30px;
+        }
+        .client>.container>.quotesthree>div::before{
+            content: "client ";
+            color:var(--seccolor);
+        }
+        .client>.container>.quotesthree>p{
+            color: var(--maincolor);
+            font-weight: 300;
+        }
+            /*quotes three(e)*/
+
+        .client>.container>.text{
+            margin: auto;
+            width: 70%;
+            height: 250px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows:40px 40px 1fr 1fr ;
+            padding: 30px;
+            background-color: white;
+            border: 0px solid transparent;
+            border-radius: 20px;
+        }
+        .client>.container>.text>:first-child{
+            grid-area: 1/1/5/1;
+            width: 80px;
+            height: 80px;
+            border: 0px transparent solid;
+            border-radius: 50%;
+            background-image: url(../images/client.png);
+            background-size: auto;
+            background-position: center;
+            
+        }   
+        .client>.container>.text>:nth-child(2){
+            grid-area: 1/2;
+            color: var(--maincolor);
+            align-self: flex-end;
+            text-transform: capitalize;
+        }       
+        .client>.container>.text>:nth-child(3){
+            grid-area:2/2;
+            font-weight: 300;
+            text-transform: capitalize;
+            color: var(--maincolor);
+        }
+        .client>.container>.text>:nth-child(4){
+            grid-area: 3/1/3/3;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: var(--maincolor);
+            font-weight: 300;
+        }
+        .client>.container>.text>:nth-child(5){
+            grid-area: 4/1/4/3;
+            align-self: center;
+        }
+        .client>.container>.text>:nth-child(5)>i{
+            color: var(--seccolor);
+        }
+        @media (max-width:650px) {
+            .client>.container>.text{
+                width: 90%;
+                height: max-content;
+                display: block;
+                text-align: center;
+            }
+            .client>.container>.text>:first-child{
+                margin: auto;
+                margin-bottom: 10px;
+            }
+        }
+    /*clients (e)*/
+    /*quotes four(s)*/
+        /*quotes (s)*/
+        .quotesfour{
+            width: 70%;
+            height: max-content;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 80px;
+        }
+        .quotesfour>div{
+            text-transform: capitalize;
+            color: var(--maincolor);
+            font-size: 30px;
+        }
+        .quotesfour>div::before{
+            content: "world ";
+            color:var(--seccolor);
+        }
+        .quotesfour>p{
+            color: var(--maincolor);
+            font-weight: 300;
+        }
+    /*quotes four (e)*/
+    /*pfinal*/
+    .pfinal>.container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        max-width: 700px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .pfinal>.container>div{
+        background-color: var(--seccolor);
+        width: 180px;
+        height: max-content;
+    }
+    .pfinal>.container>div>div{
+        padding: 10px;
+    }
+    .pfinal>.container>.one>div:first-child{
+        background-image: url(../images/News-image.png);
+        background-size: cover;
+        width: 180px;
+        height: 130px;
+    }
+
+    .pfinal>.container>.two>div:first-child{
+        background-image: url(../images/News-image1.png);
+        background-size: cover;
+        width: 180px;
+        height: 130px;
+    }
+    .pfinal>.container>.three>div:first-child{
+        background-image: url(../images/News-image2.png);
+        background-size: cover;
+        width: 180px;
+        height: 130px;
+    }
+    .pfinal>.container>div>div:nth-child(2)>h6{
+        color: white;
+        text-transform: capitalize;
+        margin: 0px;
+    }
+    .pfinal>.container>div>div:nth-child(2)>p{
+        font-size: 12px;
+        line-height: 1.6;
+        color: white;
+        font-weight: 200;
+    }
+    .pfinal>.container>div>div:nth-child(2)>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pfinal>.container>div>div:nth-child(2)>div>div{
+        color: var(--maincolor);
+        font-size: 10px;
+    }
+    /*pfinal*/
+    /*miss*/
+
+    .end>.miss{
+        text-align: center;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        color: var(--maincolor);
+        font-weight: 900;
+
+    }
+    .end>.mail{
+        background-color: #eee;
+        max-width: 350px;
+        height: 40px;
+        margin: auto;
+        border: 5px solid  #eee;
+        border-radius: 20px;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 1fr 0.4fr;
+        position: relative;
+    }
+    .end>.mail>input{
+        width: 100%;
+        border: 0px solid transparent;
+        border-radius: 20px;
+        position: absolute;
+        height: 30px;
+        color: var(--maincolor);
+        padding-left: 10px;
+        outline: none;
+    }
+    .end>.mail>input::placeholder{
+        padding-left: 10px;
+        text-transform: capitalize;
+    }
+    .end>.mail>div{
+        position: absolute;
+        width: 30%;
+        right: 0;
+        background-color: var(--seccolor);
+        border-radius: 20px;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        text-transform: capitalize;
+    }
+    .social{
+        width: 100%;
+        text-align: center;
+        background-color: var(--maincolor);
+        height: 40px;
+    }
+    .social>a{
+        line-height: 35px;
+        font-size: 30px;
+        color: white;
+        animation-duration: 10s;
+    }
+    .social>a:hover{
+        color: var(--seccolor);
+    }
+
